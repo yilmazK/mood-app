@@ -1,7 +1,7 @@
-import 'SendLoveStyles.css'
+import './MoodScreenStyles.css'
 import React from "react";
 
-class SendLove extends React.Component{
+class MoodView extends React.Component{
     constructor(props) {
         super (props)
 
@@ -17,4 +17,4 @@ class SendLove extends React.Component{
 
 }
 
-export default SendLove
+export default MoodView

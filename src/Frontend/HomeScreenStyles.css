@@ -1,0 +1,116 @@
+.background-home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #F5F6F8;
+    height: 700px;
+    width: 100%;
+}
+
+button:focus {outline:0;}
+textarea:focus {outline:0;}
+
+.box-mainpage{
+    background: #FFFFFF;
+    margin-top: 45px;
+    height: 575px;
+    width: 635px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+.title-mainpage{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 35px;
+    margin-left: 40px;
+    width: 354px;
+    height: 36px;
+    left: 39px;
+    top: 35px;
+    color: #334D6E;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.subheader-mainpage{
+    margin-top: 20px;
+    margin-left: 41px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    color: #334D6E;
+}
+
+.emoji-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 455px;
+    height: 60px;
+}
+
+.emoji-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 70px;
+    height: 60px;
+}
+
+.box-wrapper{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 125px;
+}
+
+.comment-box{
+    padding-top: 15px;
+    padding-left: 30px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+
+    border: none;
+    height: 100%;
+    width: 530px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+}
+
+.send-button{
+    margin-top: 50px;
+    margin-left: 470px;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    height: 42px;
+    width: 128px;
+    background: #109CF1;
+    box-shadow: 0px 4px 10px rgba(16, 156, 241, 0.24);
+    border-radius: 4px;
+}
+
+.emoji{
+    font-size: 35px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
