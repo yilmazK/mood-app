@@ -19,6 +19,29 @@ textarea:focus {outline:0;}
     border-radius: 4px;
 }
 
+.box-mainpage1{
+    display: none;
+    background: #FFFFFF;
+    margin-top: 45px;
+    height: 575px;
+    width: 635px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+.box-mainpage-success{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #FFFFFF;
+    margin-top: 45px;
+    height: 575px;
+    width: 635px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
 .title-mainpage{
     font-family: 'Poppins', sans-serif;
     margin-top: 35px;
@@ -53,7 +76,8 @@ textarea:focus {outline:0;}
 
 .emoji-section{
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     margin-top: 70px;
@@ -87,6 +111,17 @@ textarea:focus {outline:0;}
     border-radius: 4px;
 }
 
+.create-button{
+    position: absolute;
+    text-align: center;
+    letter-spacing: 0.01em;
+    height: 42px;
+    width: 128px;
+    background: #109CF1;
+    box-shadow: 0px 4px 10px rgba(16, 156, 241, 0.24);
+    border-radius: 4px;
+}
+
 .send-button{
     margin-top: 50px;
     margin-left: 470px;
@@ -113,4 +148,14 @@ textarea:focus {outline:0;}
     height: 50px;
     width: 50px;
     cursor: pointer;
+}
+
+.success-emoji{
+    margin-top: 50px;
+    font-size: 80px;
+}
+
+.missed-message{
+    font-size: 10px;
+    color: red;
 }

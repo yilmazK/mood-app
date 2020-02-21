@@ -16,7 +16,7 @@ export class Auth0Provider extends Component {
     config = {
         domain: 'dev-mp2cenf2.eu.auth0.com',
         client_id: 'iIpSawEdhWh6m9nH1xIdNaWEc5W8Wt8y',
-        redirect_uri: window.location.origin
+        redirect_uri: 'http://localhost:3000/homescreen'
     };
 
     componentDidMount() {
