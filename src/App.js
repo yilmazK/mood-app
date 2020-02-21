@@ -1,8 +1,6 @@
 import React, {useContext} from 'react';
-import NavBar from "./Frontend/NavBar";
-import HomeScreen from "./Frontend/HomeScreen";
 import LandingPage from "./Frontend/LandingPage";
-import AnalyticsScreen from "./Frontend/AnalyticsScreen";
+import AnalyticsScreen1 from "./Frontend/AnalyticsScreen1";
 import SendLoveScreen from "./Frontend/SendLoveScreen";
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import './App.css';
@@ -16,7 +14,7 @@ function App() {
          <div className="App">
              <Route  exact path= "/" render={() => {return <LandingPage />}} />
              <Route   path= "/homescreen" render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <HomeScreen1/>)}} />
-             <Route   path= "/analytics"  render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <AnalyticsScreen/>)}} />
+             <Route   path= "/analytics"  render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <AnalyticsScreen1/>)}} />
              <Route   path= "/sendlove"  render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <SendLoveScreen/>)}} />
          </div>
      </Router>

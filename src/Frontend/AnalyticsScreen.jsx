@@ -7,14 +7,23 @@ class AnalyticsScreen extends React.Component{
     constructor(props) {
         super (props);
         this.state = {
+            user: this.props.userProp.user,
+            id: this.props.userProp.sub,
             moodData: []
         }
     }
 
     componentDidMount() {
-        fetch( 'http://localhost:5000/users' )
-            .then( response => response.json())
-            .then(data => this.setState({moodData: data[0].moods}));
+        console.log(this.props.userProp.sub);
+        axios.get( 'http://localhost:5000/users/' + this.props.userProp.sub )
+            .then( res => {
+                console.log(res.data.moods);
+                this.setState({
+                    moodData: res.data.moods
+                })
+            })
+            .catch(err => {console.log(err.data)})
+
     }
 
     getMoodData(){
@@ -31,7 +40,10 @@ class AnalyticsScreen extends React.Component{
                 <div className="box-analyticspage">
                     <div className="diagramm-box"></div>
                     <div className="messages-wrapper">
-                   {this.state.moodData.map(item => {return ( <div className="message-box"> {item.selected} </div> )})}
+                   {this.state.moodData.map(item => {return ( <div className="message-box">
+                       <p> {item.selected} </p>
+                       <p>{item.hinweis}</p>
+                   </div> )})}
                     </div>
                 </div>
             </div>
