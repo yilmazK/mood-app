@@ -24,8 +24,8 @@ connection.once('open', () => {
 });
 
 //import router files
-const exerciseRouter = require('./routes/exercises');
-const usersRouter = require('./routes/users');
+const exerciseRouter = require('./src/Backend/routes/exercises');
+const usersRouter = require('./src/Backend/routes/users');
 
 //use router files
 app.use('/exercises', exerciseRouter);
