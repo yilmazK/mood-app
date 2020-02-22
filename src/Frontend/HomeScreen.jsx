@@ -16,7 +16,8 @@ class HomeScreen extends React.Component{
             hinweis: "",
             missing: false,
             success: false,
-            moodData: []
+            moodData: [],
+            heuteschon: false
         }
     }
 
@@ -81,6 +82,7 @@ class HomeScreen extends React.Component{
         } else {
             if (found){
                 console.log("Du kannst nur einmal am tag eine mood eintragen")
+                this.setState({heuteschon: true})
             } else {
                 this.setState({
                     missing: true
@@ -105,7 +107,7 @@ class HomeScreen extends React.Component{
                     <div className="success-emoji">🎉</div>
                 </div>}
                 <div className= {!this.state.success ? "box-mainpage" : "box-mainpage1"}>
-                    <div className="title-mainpage">Hi Yilmaz 👋🏻</div>
+                    <div className="title-mainpage">Hi {this.props.userProp.given_name} 👋🏻</div>
                     <div className="subheader-mainpage">How do you feel today?</div>
                     <div className="emoji-section">
                         <div className="emoji-wrapper">
@@ -122,7 +124,10 @@ class HomeScreen extends React.Component{
                          placeholder="Why do you feel like this?"
                          value={this.state.hinweis}
                          onChange={(evt) => this.updateHinweis(evt)}/></div>
-                    <button className="send-button" onClick={(e) => this.sendButtonPressed(e)}>Send</button>
+                    <div className="bottom-space">
+                            {this.state.heuteschon && <p className="send-failed-text">You already submitted your mood for today. See you tomorrow!</p>}
+                            <button className="send-button" onClick={(e) => this.sendButtonPressed(e)}>Send</button>
+                    </div>
                 </div>
             </div>
             </div>

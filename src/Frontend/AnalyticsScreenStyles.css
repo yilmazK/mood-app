@@ -8,7 +8,32 @@
 }
 
 .box-analyticspage{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    margin-top: 45px;
+    height: 575px;
+    width: 1100px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+.box-analyticspage1{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    margin-top: 45px;
+    height: 575px;
+    width: 1100px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+}
+
+.box-analyticspage-empty{
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     background: #FFFFFF;
@@ -117,4 +142,19 @@
 .pie-pie{
     height: 150px;
     width: 150px;
+}
+
+.empty-data-test{
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+}
+
+.empty-data-emoji{
+    font-size: 60px;
+}
+
+.send-failed-text{
+    color: red;
+    margin-top: 0px;
+    font-size: 10px;
 }

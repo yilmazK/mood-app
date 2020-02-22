@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ab41a667-1abd-4344-9509-aec9f9986118" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Frontend/AnalyticsDiagramm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/AnalyticsDiagramm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/AnalyticsScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/AnalyticsScreen.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/AnalyticsScreenStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/AnalyticsScreenStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Frontend/HomeScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/HomeScreen.jsx" afterDir="false" />
@@ -98,7 +95,7 @@
       <workItem from="1582231487501" duration="14210000" />
       <workItem from="1582273139408" duration="1749000" />
       <workItem from="1582281950223" duration="4151000" />
-      <workItem from="1582295865078" duration="37895000" />
+      <workItem from="1582295865078" duration="40992000" />
     </task>
     <servers />
   </component>

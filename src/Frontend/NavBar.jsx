@@ -15,9 +15,6 @@ function NavBar (props){
                 <div className="NavBarItem">
                     <Link to="/analytics" >Analytics</Link>
                 </div>
-                <div className="NavBarItem">
-                    <Link to="/sendlove" >Send️</Link>
-                </div>
             </div>
             <div className="logout-button" onClick={() => {auth0.logout()}}><div>Logout</div></div>
         </div>

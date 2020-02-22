@@ -86,12 +86,15 @@ class AnalyticsScreen extends React.Component{
     }
 
     render() {
-        const data = this.state.moodData;
-        return data.length !== 0 ? (
+        return (
     <div>
         <NavBar/>
             <div className="background-analytics">
-                <div className="box-analyticspage">
+                {this.state.moodData.length === 0 &&  <div className="box-analyticspage-empty">
+                    <div className="empty-data-emoji">🖖🏾</div>
+                    <p className="empty-data-test">Looking for you data</p>
+                </div>}
+                <div className={this.state.moodData.length === 0 ? "box-analyticspage" : "box-analyticspage1" }>
                     <div className="analytics-wrapper">
                         <div className="diagramm-box">
                             <AnalyticsDiagramm props = {this.state.moodData}/>
@@ -140,12 +143,7 @@ class AnalyticsScreen extends React.Component{
                 </div>
             </div>
     </div>
-        ) : (
-            <div>Loading...</div>
-
-        );
-    }
-
-}
+        );}
+     }
 
 export default AnalyticsScreen
