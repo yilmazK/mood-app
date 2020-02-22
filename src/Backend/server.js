@@ -12,9 +12,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '../../build')));
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../../build', 'index.html'))
-})
 
 //Connect to mongoDB
 const uri = 'mongodb+srv://Yilmaz:C5ee11ec@cluster0-jvbtm.gcp.mongodb.net/test?retryWrites=true&w=majority'
@@ -31,5 +28,9 @@ const usersRouter = require('./routes/users');
 //use router files
 app.use('/exercises', exerciseRouter);
 app.use('/users', usersRouter);
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../../build', 'index.html'))
+})
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
