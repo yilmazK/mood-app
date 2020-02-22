@@ -45,7 +45,7 @@ textarea:focus {outline:0;}
 .title-mainpage{
     font-family: 'Poppins', sans-serif;
     margin-top: 35px;
-    margin-left: 40px;
+    margin-left: 120px;
     width: 354px;
     height: 36px;
     left: 39px;
@@ -57,7 +57,7 @@ textarea:focus {outline:0;}
 
 .subheader-mainpage{
     margin-top: 20px;
-    margin-left: 41px;
+    margin-left: 121px;
     font-family: 'Poppins', sans-serif;
     font-weight: lighter;
     font-size: 16px;

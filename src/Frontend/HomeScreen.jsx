@@ -109,17 +109,17 @@ class HomeScreen extends React.Component{
                     <div className="subheader-mainpage">How do you feel today?</div>
                     <div className="emoji-section">
                         <div className="emoji-wrapper">
-                            <div className="emoji" id="first" onClick={() => this.setState({selected: 1})}>😐</div>
-                            <div className="emoji" id="second" onClick={() => this.setState({selected: 2})}>😴</div>
-                            <div className="emoji" id="third" onClick={() => this.setState({selected: 3})}>😁</div>
-                            <div className="emoji" id="fourth" onClick={() => this.setState({selected: 4})}>😎</div>
+                            <div className="emoji" id="first" onClick={() => this.setState({selected: 1})}>🙁</div>
+                            <div className="emoji" id="second" onClick={() => this.setState({selected: 2})}>😑</div>
+                            <div className="emoji" id="third" onClick={() => this.setState({selected: 3})}>😊</div>
+                            <div className="emoji" id="fourth" onClick={() => this.setState({selected: 4})}>🎉</div>
                         </div>
                         {this.state.missing && <p className="missed-message">Zum absenden bitte eine Emotion auswählen!</p>}
                     </div>
 
                     <div className="box-wrapper"><textarea
                          className="comment-box"
-                         placeholder="Why did you choose that emoji?"
+                         placeholder="Why do you feel like this?"
                          value={this.state.hinweis}
                          onChange={(evt) => this.updateHinweis(evt)}/></div>
                     <button className="send-button" onClick={(e) => this.sendButtonPressed(e)}>Send</button>

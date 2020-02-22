@@ -4,7 +4,9 @@ import NavBar from "./NavBar";
 import axios from 'axios';
 import AnalyticsDiagramm from "./AnalyticsDiagramm";
 import DatePicker from "react-datepicker";
+import ReactMinimalPieChart from "react-minimal-pie-chart";
 import "react-datepicker/dist/react-datepicker.css";
+import {mockComponent} from "react-dom/test-utils";
 
 class AnalyticsScreen extends React.Component{
     constructor(props) {
@@ -15,21 +17,39 @@ class AnalyticsScreen extends React.Component{
             moodData: [],
             choosen: [],
             startDate: new Date(),
-            keinEintrag: false
+            keinEintrag: false,
+            sad: 0,
+            ok: 0,
+            good: 0,
+            sueper: 0
+
         }
     }
 
     componentDidMount() {
-        console.log(this.props.userProp.sub);
+        console.log(this.props);
         axios.get( 'http://localhost:5000/users/' + this.props.userProp.sub )
             .then( res => {
                 console.log(res.data.moods);
                 this.setState({
                     moodData: res.data.moods,
-                })
+                });
+                this.calculatePie();
             })
             .catch(err => {console.log(err.data)})
     }
+
+    calculatePie(){
+        const mood = [];
+        this.state.moodData.map(data => {
+            mood.push(data.selected)
+        });
+        this.setState({sad: Math.round( ((mood.filter((v) => (v === 1 )).length / mood.length) * 100) *  100) / 100});
+        this.setState({ok: Math.round( ((mood.filter((v) => (v === 2 )).length / mood.length) * 100) *  100) / 100});
+        this.setState({good: Math.round( ((mood.filter((v) => (v === 3 )).length / mood.length) * 100) *  100) / 100});
+        this.setState({sueper: Math.round( ((mood.filter((v) => (v === 4 )).length / mood.length) * 100) *  100) / 100});
+    }
+
 
     addZ(n){
         return n<10? '0'+n:''+n;
@@ -42,7 +62,7 @@ class AnalyticsScreen extends React.Component{
     changeFormat(date){
         this.setState({choosen: []});
         var newDate = date.getFullYear() + '-' + (this.addZ(date.getMonth()+1)) + '-' + (this.addD(date.getDate()));
-        console.log(newDate)
+        console.log(newDate);
         this.getCorrectMood(newDate);
         return newDate
     }
@@ -77,7 +97,14 @@ class AnalyticsScreen extends React.Component{
                             <AnalyticsDiagramm props = {this.state.moodData}/>
                         </div>
                         <div className="pie-box">
-                            hallo
+                            <ReactMinimalPieChart className="pie-pie" animate={false} animationDuration={500} animationEasing="ease-out" cx={50} cy={50} data={[
+                                {color: '#ff3d00', title: 'sad', value: this.state.sad},
+                                {color: '#ff9100', title: 'ok', value: this.state.ok},
+                                {color: '#ffea00', title: 'good', value: this.state.good},
+                                {color: '#c6ff00', title: 'sueper', value: this.state.sueper}]}
+                                 label labelPosition={50} labelStyle={{fill: '#121212', fontFamily: 'Poppins', fontSize: '5px'}}
+                                  lengthAngle={360} lineWidth={100} onClick={undefined} onMouseOut={undefined} onMouseOver={undefined}
+                                  paddingAngle={0} radius={50} rounded={false} startAngle={0} viewBoxSize={[100, 100]}/>
                         </div>
                     </div>
                     <div>

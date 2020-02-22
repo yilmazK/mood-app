@@ -5,15 +5,12 @@ import {Auth0Context} from "../contexts/auth0-context";
 
 
 const AnalyticsDiagramm = (props) => {
-    const auth0 = useContext(Auth0Context);
 
-    //Set dateArray to Array of dates, but they are not allowed to dublicate (jedes Datum nur einmal)
     const dateArray = [];
     props.props.map(data => {
         dateArray.push(data.datum)
     });
 
-    //selected muss eine Zahl zwischen 1-4 sein
     const mood = [];
     props.props.map(data => {
         mood.push(data.selected)
