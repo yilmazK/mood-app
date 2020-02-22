@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import MoodView from "./MoodView";
 import axios from 'axios';
 import {Auth0Context} from "../contexts/auth0-context";
+import DatePicker from "react-datepicker/es";
 
 class HomeScreen extends React.Component{
     constructor(props) {
@@ -11,29 +12,45 @@ class HomeScreen extends React.Component{
         this.state = {
             user: this.props.userProp.user,
             id: this.props.userProp.sub,
-            selected: "",
+            selected: null,
             hinweis: "",
             missing: false,
             success: false,
+            moodData: []
         }
     }
 
-
-    createNewUser(){
-        axios.post('http://localhost:5000/users/add', {
-            username: "Yilmaz" + Math.random()
-        })
-            .then(res => {
+    componentDidMount() {
+        console.log(this.props.userProp.sub);
+        axios.get( 'http://localhost:5000/users/' + this.props.userProp.sub )
+            .then( res => {
+                console.log(res.data.moods);
                 this.setState({
-                    id: res.data._id
-                });
-                console.log(res.data._id)
-            });
+                    moodData: res.data.moods
+                })
+            })
+            .catch(err => {console.log(err.data)})
+
+    }
+
+    addZ(n){
+        return n<10? '0'+n:''+n;
+    }
+
+    getCurrentDate(){
+
+        var tempDate = new Date();
+        var date = tempDate.getFullYear() + '-' + (this.addZ(tempDate.getMonth()+1)) + '-' + tempDate.getDate();
+        console.log(date)
+
+        return date
     }
 
     sendButtonPressed(e){
-        console.log(this.state.id)
-        if (this.state.selected !== "") {
+        console.log(this.state.id);
+        const found = this.state.moodData.some(el => el.datum === this.getCurrentDate());
+        console.log(found);
+        if (this.state.selected !== "" && !found) {
             console.log("SEEEND REQUEST");
             console.log(this.state.user);
             console.log(this.state.id);
@@ -41,8 +58,11 @@ class HomeScreen extends React.Component{
             var answer = {
                 "selected": this.state.selected,
                 "hinweis": this.state.hinweis,
-                "datum" : + new Date()
+                "datum" : this.getCurrentDate()
             };
+
+            console.log(answer);
+            console.log(this.state.moodData);
 
             axios.post('http://localhost:5000/users/update/' + this.props.userProp.sub, { new: answer })
                 .then(res => {
@@ -59,9 +79,13 @@ class HomeScreen extends React.Component{
                 })
 
         } else {
-            this.setState({
-                missing: true
-            });
+            if (found){
+                console.log("Du kannst nur einmal am tag eine mood eintragen")
+            } else {
+                this.setState({
+                    missing: true
+                });
+            }
         }
     }
 
@@ -85,12 +109,10 @@ class HomeScreen extends React.Component{
                     <div className="subheader-mainpage">How do you feel today?</div>
                     <div className="emoji-section">
                         <div className="emoji-wrapper">
-                            <div className="emoji" id="first" onClick={() => this.setState({selected: "first"})}>😐</div>
-                            <div className="emoji" id="second" onClick={() => this.setState({selected: "two"})}>😴</div>
-                            <div className="emoji" id="third" onClick={() => this.setState({selected: "third"})}>😁</div>
-                            <div className="emoji" id="fourth" onClick={() => this.setState({selected: "fourth"})}>😎</div>
-                            <div className="emoji" id="five" onClick={() => this.setState({selected: "fifth"})}>🤢</div>
-                            <div className="emoji" id="six" onClick={() => this.setState({selected: "six"})}>😢</div>
+                            <div className="emoji" id="first" onClick={() => this.setState({selected: 1})}>😐</div>
+                            <div className="emoji" id="second" onClick={() => this.setState({selected: 2})}>😴</div>
+                            <div className="emoji" id="third" onClick={() => this.setState({selected: 3})}>😁</div>
+                            <div className="emoji" id="fourth" onClick={() => this.setState({selected: 4})}>😎</div>
                         </div>
                         {this.state.missing && <p className="missed-message">Zum absenden bitte eine Emotion auswählen!</p>}
                     </div>
