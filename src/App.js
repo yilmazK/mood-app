@@ -13,7 +13,7 @@ function App() {
      <Router>
          <div className="App">
              <Route  exact path= "/" render={() => {return <LandingPage />}} />
-             <Route   path= "https://mood-app1232.herokuapp.com/homescreen" render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <HomeScreen1/>)}} />
+             <Route   path= "/homescreen" render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <HomeScreen1/>)}} />
              <Route   path= "/analytics"  render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <AnalyticsScreen1/>)}} />
              <Route   path= "/sendlove"  render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <SendLoveScreen/>)}} />
          </div>
