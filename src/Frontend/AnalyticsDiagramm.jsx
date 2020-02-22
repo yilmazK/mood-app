@@ -27,7 +27,7 @@ const AnalyticsDiagramm = (props) => {
 
     var weekNames = ['M', 'D', 'M', 'D', 'F', 'SA', 'SO'];
     var monthNames = ['JA', 'FB', 'MRZ', 'AP', 'MA', 'JUN', 'JUL', 'AUG', 'SEP', 'OKT', 'NOV', 'DEZ'];
-    var panelColors = ['#EEEEEE', '#c6ff00', '#ffea00', '#ff9100', '#ff3d00'];
+    var panelColors = ['#EEEEEE', '#ff3d00', '#ff9100', '#ffea00', '#c6ff00'];
     var values = {
         '2020-01-01': 4,
         '2020-06-23': 1,

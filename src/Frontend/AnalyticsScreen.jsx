@@ -81,26 +81,32 @@ class AnalyticsScreen extends React.Component{
                         </div>
                     </div>
                     <div>
-                        <DatePicker
-                            selected={this.state.startDate}
-                            onChange={(date) => {
-                                this.changeFormat(date);
-                                this.setState({startDate: date})
-                            }}
-                        />
-                        <div onClick={() => {this.setState({choosen: [], startDate: new Date (), keinEintrag: false})}}>clear</div>
+                        <div className="picker-section">
+                                <p className="select-picker-header">Select a date:</p>
+                                 <DatePicker
+                                     className = "datepicker-analyitcs"
+                                    selected={this.state.startDate}
+                                    onChange={(date) => {
+                                        this.changeFormat(date);
+                                        this.setState({startDate: date})
+                                    }}
+                                 />
+                                <div className="all-button" onClick={() => {this.setState({choosen: [], startDate: new Date (), keinEintrag: false})}}>
+                                    All
+                                </div>
+                        </div>
                     </div>
                     <div className="messages-wrapper">
                         {this.state.choosen.length === 1 ?
                             <div className="message-box">
-                                <p> {this.state.choosen[0].selected} </p>
+                                <p> {this.state.choosen[0].selected === 1 ? "🙁" : this.state.choosen[0].selected === 2 ? "😐" : this.state.choosen[0].selected === 3 ? "😊" : this.state.choosen[0].selected === 4 && "🎉"  } </p>
                                 <p>{this.state.choosen[0].hinweis}</p>
                             </div> : this.state.keinEintrag ?
                                 <div className="message-box">
                                     <p> Kein Eintrag an der Stelle </p>
                                 </div> :
                        this.state.moodData.map(item => {return ( <div className="message-box">
-                       <p> {item.selected} </p>
+                       <p> {item.selected === 1 ? "🙁" : item.selected === 2 ? "😐" : item.selected === 3 ? "😊" : item.selected === 4 && "🎉"} </p>
                        <p>{item.hinweis}</p>
                    </div> )})}
                     </div>
