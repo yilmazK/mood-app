@@ -23,7 +23,7 @@ class HomeScreen extends React.Component{
 
     componentDidMount() {
         console.log(this.props.userProp.sub);
-        axios.get( 'http://localhost:5000/users/' + this.props.userProp.sub )
+        axios.get( 'https://mood-app1232.herokuapp.com/users/' + this.props.userProp.sub )
             .then( res => {
                 console.log(res.data.moods);
                 this.setState({
@@ -65,7 +65,7 @@ class HomeScreen extends React.Component{
             console.log(answer);
             console.log(this.state.moodData);
 
-            axios.post('http://localhost:5000/users/update/' + this.props.userProp.sub, { new: answer })
+            axios.post('https://mood-app1232.herokuapp.com/users/update/' + this.props.userProp.sub, { new: answer })
                 .then(res => {
                     console.log(res.data);
                     this.setState({
