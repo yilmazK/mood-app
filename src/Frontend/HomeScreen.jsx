@@ -111,10 +111,10 @@ class HomeScreen extends React.Component{
                     <div className="subheader-mainpage">How do you feel today?</div>
                     <div className="emoji-section">
                         <div className="emoji-wrapper">
-                            <div className="emoji" id="first" onClick={() => this.setState({selected: 1})}>🙁</div>
-                            <div className="emoji" id="second" onClick={() => this.setState({selected: 2})}>😑</div>
-                            <div className="emoji" id="third" onClick={() => this.setState({selected: 3})}>😊</div>
-                            <div className="emoji" id="fourth" onClick={() => this.setState({selected: 4})}>🎉</div>
+                            <div className={this.state.selected === 1 ? "emoji-selected" : "emoji"} onClick={() => this.setState({selected: 1})}>🙁</div>
+                            <div className={this.state.selected === 2 ? "emoji-selected" : "emoji"} onClick={() => this.setState({selected: 2})}>😑</div>
+                            <div className={this.state.selected === 3 ? "emoji-selected" : "emoji"} onClick={() => this.setState({selected: 3})}>😊</div>
+                            <div className={this.state.selected === 4 ? "emoji-selected" : "emoji"} onClick={() => this.setState({selected: 4})}>🎉</div>
                         </div>
                         {this.state.missing && <p className="missed-message">Zum absenden bitte eine Emotion auswählen!</p>}
                     </div>
