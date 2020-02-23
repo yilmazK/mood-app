@@ -44,15 +44,15 @@ textarea:focus {outline:0;}
 
 .title-mainpage{
     font-family: 'Poppins', sans-serif;
-    margin-top: 35px;
-    margin-left: 120px;
-    width: 354px;
+    margin-top: 70px;
+    width: 715px;
     height: 36px;
     left: 39px;
     top: 35px;
     color: #334D6E;
     font-size: 24px;
     font-weight: normal;
+    text-align: center;
 }
 
 .subheader-mainpage{

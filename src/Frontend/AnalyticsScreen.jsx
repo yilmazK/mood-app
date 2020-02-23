@@ -92,7 +92,7 @@ class AnalyticsScreen extends React.Component{
             <div className="background-analytics">
                 {this.state.moodData.length === 0 &&  <div className="box-analyticspage-empty">
                     <div className="empty-data-emoji">🖖🏾</div>
-                    <p className="empty-data-test">Looking for you data</p>
+                    <p className="empty-data-test">Looking for your data</p>
                 </div>}
                 <div className={this.state.moodData.length === 0 ? "box-analyticspage" : "box-analyticspage1" }>
                     <div className="analytics-wrapper">
@@ -130,14 +130,14 @@ class AnalyticsScreen extends React.Component{
                         {this.state.choosen.length === 1 ?
                             <div className="message-box">
                                 <p> {this.state.choosen[0].selected === 1 ? "🙁" : this.state.choosen[0].selected === 2 ? "😐" : this.state.choosen[0].selected === 3 ? "😊" : this.state.choosen[0].selected === 4 && "🎉"  } </p>
-                                <p className="message">{this.state.choosen[0].hinweis}</p>
+                                <p className="message-anal">{this.state.choosen[0].hinweis}</p>
                             </div> : this.state.keinEintrag ?
                                 <div className="message-box">
                                     <p> Kein Eintrag an der Stelle </p>
                                 </div> :
                        this.state.moodData.map(item => {return ( <div className="message-box">
                        <p> {item.selected === 1 ? "🙁" : item.selected === 2 ? "😐" : item.selected === 3 ? "😊" : item.selected === 4 && "🎉"} </p>
-                       <p>{item.hinweis}</p>
+                       <p className="message-anal">{item.hinweis}</p>
                    </div> )})}
                     </div>
                 </div>
