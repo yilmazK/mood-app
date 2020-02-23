@@ -103,7 +103,7 @@ class HomeScreen extends React.Component{
                 <NavBar/>
             <div className="background-home">
                 {this.state.success &&   <div className="box-mainpage-success">
-                    <div className="title-mainpage">Thank you for Submitting! See you tomorrow {this.props.userProp.given_name}</div>
+                    <div className="title-mainpage-success">Thank you for Submitting! See you tomorrow {this.props.userProp.given_name}</div>
                     <div className="success-emoji">🎉</div>
                 </div>}
                 <div className= {!this.state.success ? "box-mainpage" : "box-mainpage1"}>
