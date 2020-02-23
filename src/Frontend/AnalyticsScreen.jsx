@@ -130,7 +130,7 @@ class AnalyticsScreen extends React.Component{
                         {this.state.choosen.length === 1 ?
                             <div className="message-box">
                                 <p> {this.state.choosen[0].selected === 1 ? "🙁" : this.state.choosen[0].selected === 2 ? "😐" : this.state.choosen[0].selected === 3 ? "😊" : this.state.choosen[0].selected === 4 && "🎉"  } </p>
-                                <p>{this.state.choosen[0].hinweis}</p>
+                                <p className="message">{this.state.choosen[0].hinweis}</p>
                             </div> : this.state.keinEintrag ?
                                 <div className="message-box">
                                     <p> Kein Eintrag an der Stelle </p>
