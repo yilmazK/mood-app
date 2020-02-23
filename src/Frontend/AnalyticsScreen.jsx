@@ -28,7 +28,7 @@ class AnalyticsScreen extends React.Component{
 
     componentDidMount() {
         console.log(this.props);
-        axios.get( 'https://mood-app1232.herokuapp.com/users/' + this.props.userProp.sub )
+        axios.get( 'https://moodio.xyz/users/' + this.props.userProp.sub )
             .then( res => {
                 console.log(res.data.moods);
                 this.setState({
