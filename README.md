@@ -6,7 +6,7 @@ An application that allows you to track your daily mood. You can see your moods 
 
 ## Project Status
 
-This project is currently in development. This project was created for module assessments at the CODE University of Applied Sciences. 
+This project is currently in development. This project was created during my studies at the CODE University of Applied Sciences in Berlin.
 
 ## Installation and Setup Instructions
  
