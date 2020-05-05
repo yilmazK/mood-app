@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import './AnalyticsDiagramm.css'
 import Calendar from 'react-github-contribution-calendar';
-import {Auth0Context} from "../contexts/auth0-context";
+import {Auth0Context} from "../Backend/contexts/auth0-context";
 
 
 const AnalyticsDiagramm = (props) => {

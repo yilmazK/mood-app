@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import "./NavBarstyles.css"
 import {BrowserRouter as Router, Link} from 'react-router-dom'
-import {Auth0Context} from "../contexts/auth0-context";
+import {Auth0Context} from "../Backend/contexts/auth0-context";
 
 function NavBar (props){
     const auth0 = useContext(Auth0Context);

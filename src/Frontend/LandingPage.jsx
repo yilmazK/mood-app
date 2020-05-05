@@ -1,5 +1,5 @@
 import React, {useContext}from "react";
-import { Auth0Context } from '../contexts/auth0-context';
+import { Auth0Context } from '../Backend/contexts/auth0-context';
 import './LandingPagestyles.css'
 import { useHistory } from "react-router-dom";
 import HomeScreen from "./HomeScreen";

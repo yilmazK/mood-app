@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {Auth0Provider} from "./contexts/auth0-context";
+import {Auth0Provider} from "./Backend/contexts/auth0-context";
 
 ReactDOM.render(
     <Auth0Provider>

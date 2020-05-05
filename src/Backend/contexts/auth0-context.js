@@ -14,9 +14,9 @@ export class Auth0Provider extends Component {
         user: null
     };
     config = {
-        domain: 'dev-mp2cenf2.eu.auth0.com',
-        client_id: 'iIpSawEdhWh6m9nH1xIdNaWEc5W8Wt8y',
-        redirect_uri: 'https://www.moodio.xyz/homescreen'
+        domain: process.env.AUTH_DOMAIN,
+        client_id: process.env.CLIENT_ID,
+        redirect_uri: process.env.REDIRECT_URL
     };
 
     componentDidMount() {

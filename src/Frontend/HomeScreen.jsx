@@ -3,7 +3,7 @@ import React, {useContext} from "react";
 import NavBar from "./NavBar";
 import MoodView from "./MoodView";
 import axios from 'axios';
-import {Auth0Context} from "../contexts/auth0-context";
+import {Auth0Context} from "../Backend/contexts/auth0-context";
 import DatePicker from "react-datepicker/es";
 
 class HomeScreen extends React.Component{
