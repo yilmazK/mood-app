@@ -14,7 +14,6 @@ function App() {
              <Route  exact path= "/" render={() => {return <LandingPage />}} />
              <Route   path= "/homescreen" render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <HomeScreen1/>)}} />
              <Route   path= "/analytics"  render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <AnalyticsScreen1/>)}} />
-             <Route   path= "/sendlove"  render={() => {return (!auth0.isAuthenticated ? <LandingPage/> : <SendLoveScreen/>)}} />
          </div>
      </Router>
   );
