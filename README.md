@@ -28,16 +28,17 @@ To Visit App:
 
 `localhost:3000/` 
 
-## Project Screen Shot(s)
 
-### Architecture:
+## Architecture:
 ![architecture](./src/Frontend/assets/architecture.png)
 
-### Mood Page:
+
+## Project Screen Shots
+
+### Moods Page:
 ![Mood Page](./src/Frontend/assets/First-page.png)
 
 ### Analytics Page:
-
 ![Mood Page](./src/Frontend/assets/Second-page.png)
  
 
