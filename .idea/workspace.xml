@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab41a667-1abd-4344-9509-aec9f9986118" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/AnalyticsDiagramm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/AnalyticsDiagramm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/AnalyticsScreen1.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/AnalyticsScreen1.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/HomeScreen.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/HomeScreen.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/HomeScreen1.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/HomeScreen1.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/LandingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frontend/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frontend/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/auth0-context.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backend/contexts/auth0-context.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +50,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Frontend/assets" />
       <recent name="$PROJECT_DIR$/src/Backend" />
+      <recent name="$PROJECT_DIR$/src/Frontend/assets" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/contexts" />
@@ -133,7 +141,7 @@
       <workItem from="1587516530934" duration="29000" />
       <workItem from="1587685080480" duration="39000" />
       <workItem from="1587688040408" duration="49000" />
-      <workItem from="1588699335119" duration="3328000" />
+      <workItem from="1588699335119" duration="4053000" />
     </task>
     <servers />
   </component>
