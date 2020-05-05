@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import LandingPage from "./Frontend/LandingPage";
 import AnalyticsScreen1 from "./Frontend/AnalyticsScreen1";
-import SendLoveScreen from "./Frontend/SendLoveScreen";
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import './App.css';
 import HomeScreen1 from "./Frontend/HomeScreen1";
