@@ -21,12 +21,7 @@ connection.once('open', () => {
     console.log("MongoDB databse connection established successfully");
 });
 
-//import router files
-const exerciseRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
-
-//use router files
-app.use('/exercises', exerciseRouter);
 app.use('/users', usersRouter);
 
 app.get('*', (req, res) => {
