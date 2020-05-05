@@ -31,6 +31,6 @@ app.use('/users', usersRouter);
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../../build', 'index.html'))
-})
+});
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
