@@ -15,7 +15,7 @@
     "express": "^4.17.1",
     "jio": "^3.39.0",
     "joi": "^14.3.1",
-    "moment": "^2.25.3",
+    "moment": "^2.29.2",
     "mongoose": "^5.9.12",
     "react": "^16.13.1",
     "react-datepicker": "^2.14.1",
