@@ -23,7 +23,7 @@
     "react-github-contribution-calendar": "^2.0.0",
     "react-minimal-pie-chart": "^6.0.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0",
+    "react-scripts": "5.0.1",
     "react-use-auth": "^0.5.3",
     "reactjs-calendar-heatmap": "0.0.10"
   },
